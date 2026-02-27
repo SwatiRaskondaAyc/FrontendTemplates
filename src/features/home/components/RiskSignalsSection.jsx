@@ -41,15 +41,15 @@ const riskSignals = [
     description: 'Healthy leverage levels',
     icon: CheckCircle
   },
-  {
-    id: 'liquidity',
-    title: 'Cash Liquidity',
-    value: '18%',
-    threshold: '15%',
-    status: 'safe',
-    description: 'Adequate reserves for rebalancing',
-    icon: CheckCircle
-  },
+  // {
+  //   id: 'liquidity',
+  //   title: 'Cash Liquidity',
+  //   value: '18%',
+  //   threshold: '15%',
+  //   status: 'safe',
+  //   description: 'Adequate reserves for rebalancing',
+  //   icon: CheckCircle
+  // },
   {
     id: 'correlation',
     title: 'Portfolio Correlation',
