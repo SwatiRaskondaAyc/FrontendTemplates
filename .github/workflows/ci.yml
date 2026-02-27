@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, third-template ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main, develop, third-template ]
 
 jobs:
   build-and-test:
@@ -45,7 +45,7 @@ jobs:
   deploy:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/third-template') && github.event_name == 'push'
 
     steps:
     - uses: actions/checkout@v4
